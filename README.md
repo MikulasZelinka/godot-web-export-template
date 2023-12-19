@@ -8,11 +8,15 @@ On any push to `main`, a new build will be deployed to Netlify and available at 
 
 Current Godot version: `4.2.1`
 
+## GitHub setup
+
+Choose `Read and write permissions` for Actions in [Settings → Actions](settings/actions).
+
 ## Netlify setup
 
 1. Import your GitHub repository to Netlify: <https://app.netlify.com/start>
 2. Use the `gh-pages` branch to deploy.
-3. Optionally, configure a custom domain (e.g., <https://TODO>)
+3. Optionally, configure a custom domain (e.g., <https://godot-web-export-template.netlify.app/>)
 4. Optionally, add a status badge to [README.md](README.md): `https://app.netlify.com/sites/<your-site>/configuration/general#status-badges`
 
 ## Quick tunnel share
