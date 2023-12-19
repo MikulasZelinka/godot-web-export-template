@@ -10,7 +10,7 @@ Current Godot version: `4.2.1`
 
 ## GitHub setup
 
-Choose `Read and write permissions` for Actions in [Settings → Actions](settings/actions).
+Choose `Read and write permissions` for Actions in [Settings → Actions](../../settings/actions).
 
 ## Netlify setup
 
