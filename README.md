@@ -1,5 +1,7 @@
 # Godot Web Export Template
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/695dd1ff-9c7a-473d-bb5b-a89c5c9a979f/deploy-status)](https://app.netlify.com/sites/godot-web-export-template/deploys)
+
 Automatically deploys your game builds to Web using Netlify.
 
 Uses <https://github.com/abarichello/godot-ci> for CI.
@@ -16,8 +18,8 @@ Choose `Read and write permissions` for Actions in [Settings → Actions](../../
 
 1. Import your GitHub repository to Netlify: <https://app.netlify.com/start>
 2. Use the `gh-pages` branch to deploy.
-3. Optionally, configure a custom domain (e.g., <https://godot-web-export-template.netlify.app/>)
-4. Optionally, add a status badge to [README.md](README.md): `https://app.netlify.com/sites/<your-site>/configuration/general#status-badges`
+3. Optionally, configure a custom domain (e.g., <https://godot-web-export-template.netlify.app/>): `https://app.netlify.com/sites/<your-site>/configuration/general`
+4. Optionally, add a status badge (from the same config page) to [README.md](README.md) (replace the `Netlify Status` above).
 
 ## Quick tunnel share
 
