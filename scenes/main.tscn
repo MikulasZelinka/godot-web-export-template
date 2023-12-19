@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn6xsn0ux77dd"]
+
+[ext_resource type="PackedScene" uid="uid://b8f62f13cas13" path="res://scenes/SpriteShader/sprite_shader.tscn" id="1_gk1l1"]
+
+[node name="Main" type="Node2D"]
+
+[node name="SpriteShader" parent="." instance=ExtResource("1_gk1l1")]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 319.0
+offset_top = 562.0
+offset_right = 806.0
+offset_bottom = 611.0
+text = "You should see the sprite distort if shaders are working.
+
+Click (and optionally hold) or use the arrow keys to move the sprite.
+"
+horizontal_alignment = 1

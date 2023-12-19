@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8f62f13cas13"]
+
+[ext_resource type="Shader" path="res://scenes/SpriteShader/sprite.gdshader" id="1_le1mo"]
+[ext_resource type="Texture2D" uid="uid://fmvdj2vqps32" path="res://assets/icon.svg" id="2_hchso"]
+[ext_resource type="Script" path="res://scenes/SpriteShader/sprite_shader.gd" id="3_xt6uq"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_iiqpa"]
+noise_type = 3
+frequency = 0.001
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_x4hgb"]
+width = 128
+height = 128
+noise = SubResource("FastNoiseLite_iiqpa")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ujvja"]
+shader = ExtResource("1_le1mo")
+shader_parameter/distortion = 0.1
+shader_parameter/distortion_speed = 6.9
+shader_parameter/distortion_texture = SubResource("NoiseTexture2D_x4hgb")
+
+[node name="SpriteShader" type="Sprite2D"]
+material = SubResource("ShaderMaterial_ujvja")
+position = Vector2(559, 350)
+texture = ExtResource("2_hchso")
+script = ExtResource("3_xt6uq")
+
+[node name="DistortionSlider" type="HSlider" parent="."]
+offset_left = -59.0
+offset_top = 78.0
+offset_right = 60.0
+offset_bottom = 94.0
+max_value = 1.0
+step = 0.01
+value = 0.1
+
+[node name="DistortionSpeedSlider" type="HSlider" parent="."]
+offset_left = -58.0
+offset_top = 102.0
+offset_right = 61.0
+offset_bottom = 118.0
+max_value = 32.0
+value = 1.0
+
+[connection signal="value_changed" from="DistortionSlider" to="." method="_on_distortion_slider_value_changed"]
+[connection signal="value_changed" from="DistortionSpeedSlider" to="." method="_on_distortion_speed_slider_value_changed"]
