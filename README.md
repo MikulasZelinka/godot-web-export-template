@@ -31,13 +31,13 @@ If you're on Windows, you can use WSL to run the commands below.
 and download [serve.py](https://raw.githubusercontent.com/godotengine/godot/master/platform/web/serve.py) from the Godot repository:
 
 ```bash
-wget https://raw.githubusercontent.com/godotengine/godot/master/platform/web/serve.py
+wget https://raw.githubusercontent.com/godotengine/godot/master/platform/web/serve.py -P build
 ```
 
 Then, assuming you have a local build in `build/web`, run:
 
 ```bash
-python serve.py -n -r build/web
+python build/serve.py -n -r web
 ```
 
 and in another terminal:
